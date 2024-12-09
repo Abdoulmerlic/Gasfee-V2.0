@@ -1,6 +1,6 @@
 import PageHeader from '../components/shared/PageHeader';
-import TokenList from '../components/shared/TokenList';
 import TopUpOptions from '../components/wallet/TopUpOptions';
+import TokenList from '../components/shared/TokenList';
 
 export default function Wallet() {
   const tokens = [
@@ -26,19 +26,8 @@ export default function Wallet() {
     <div className="max-w-md mx-auto">
       <PageHeader title="Wallet" />
       <div className="p-4 space-y-6">
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Top Up Options
-          </h2>
-          <TopUpOptions />
-        </div>
-        
-        <div>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Your Assets
-          </h2>
-          <TokenList tokens={tokens} />
-        </div>
+        <TopUpOptions />
+        <TokenList tokens={tokens} />
       </div>
     </div>
   );
