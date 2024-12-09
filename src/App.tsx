@@ -11,6 +11,9 @@ import TopUpUSDT from './pages/wallet/TopUpUSDT';
 import Buy from './pages/Buy';
 import History from './pages/History';
 import Settings from './pages/Settings';
+import Profile from './pages/settings/Profile';
+import Security from './pages/settings/Security';
+import Notifications from './pages/settings/Notifications';
 
 const queryClient = new QueryClient();
 
@@ -34,6 +37,9 @@ function App() {
                       <Route path="/buy" element={<Buy />} />
                       <Route path="/history" element={<History />} />
                       <Route path="/settings" element={<Settings />} />
+                      <Route path="/settings/profile" element={<Profile />} />
+                      <Route path="/settings/security" element={<Security />} />
+                      <Route path="/settings/notifications" element={<Notifications />} />
                     </Routes>
                     <BottomNav />
                   </div>
