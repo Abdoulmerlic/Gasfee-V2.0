@@ -25,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route
-              path="/"
+              path="*"
               element={
                 <AuthGuard>
                   <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-16">
