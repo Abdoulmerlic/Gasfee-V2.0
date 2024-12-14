@@ -6,11 +6,10 @@ export const SUPPORTED_COINS = [
   'solana',
   'fantom',
   'the-open-network',
+  'sui'
 ] as const;
 
 export const CURRENCY = {
   NAIRA: '₦',
   USD: '$',
 } as const;
-
-export const API_URL = '';

@@ -12,6 +12,7 @@ export const getTokenPrices = async (ids: string[]) => {
       include_24hr_change: true,
     },
   });
+  console.log(response.data);
   return response.data;
 };
 

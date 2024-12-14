@@ -4,7 +4,8 @@ interface Token {
   symbol: string;
   name: string;
   balance: number;
-  price: number;
+  priceUSD: number;
+  priceNGN: number;
   icon: string;
   change24h: number;
 }
@@ -32,8 +33,8 @@ export default function TokenList({ tokens, onTokenClick }: TokenListProps) {
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <p className="font-medium">{token.balance.toFixed(4)}</p>
-              <p className={`text-sm ${token.change24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              <p className="font-medium">{token.price.toFixed(2)}</p>
+              <p className={`text-sm ${parseFloat(token.change24h) >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {token.change24h >= 0 ? '+' : ''}{token.change24h}%
               </p>
             </div>
